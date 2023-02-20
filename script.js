@@ -2,11 +2,14 @@ import { themeSwitcher } from "./modules/theme-switcher.js"
 import { copy } from "./modules/copy-functions.js"
 import { clickInteraction, keyboardInteraction } from "./modules/user-interactions.js"
 
-import { themeSwitcherButton, copyButton } from "./modules/dom-elements.js"
+import { themeSwitcherButton, copyButton, keys } from "./modules/dom-elements.js"
 
 themeSwitcherButton.addEventListener("click", themeSwitcher)
 
-clickInteraction()
-keyboardInteraction()
+input.addEventListener("keydown", keyboardInteraction)
+
+keys.forEach(key => {
+  key.addEventListener("click", clickInteraction)
+})
 
 copyButton.addEventListener("click", copy)
