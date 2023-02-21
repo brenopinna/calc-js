@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --error-color: #ff0043;
+  --transition: 0.2s;
+}
+
+:root.dark {
+  --bg-color: #212529;
+  --border-color: #666;
+  --font-color: #f1f5f9;
+  --primary-color: #4dff91;
+}
+
+:root.light {
+  --bg-color: #f1f5f9;
+  --border-color: #aaa;
+  --font-color: #212529;
+  --primary-color: #26834a;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Ubuntu";
+  padding: 0 1.7rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+header {
+  color: var(--font-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+#theme-switcher {
+  transition: var(--transition);
+  cursor: pointer;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 0.2rem 1rem;
+  color: var(--font-color);
+  border: 2px solid var(--font-color);
+  border-radius: 0.2rem;
+}
+
+#theme-switcher:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+#input {
+  width: 100%;
+  text-align: right;
+  padding: 1rem 1.2rem;
+  font-size: 1.7rem;
+  color: var(--font-color);
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+#keys {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+#keys button {
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--bg-color);
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#keys button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+}
+
+#copy {
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 5rem;
+  color: var(--font-color);
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+#result {
+  width: 100%;
+  text-align: right;
+  padding: 1rem 1.2rem;
+  font-size: 1.7rem;
+  color: var(--font-color);
+  background: transparent;
+  border: 2px solid var(--border-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: none;
+}
